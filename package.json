@@ -2,14 +2,13 @@
   "name": "my-node-aws-lambda-layer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "run-p build:*",
     "build:jsdom": "cd jsdom && npm install && npm run build",
     "build:uuid": "cd uuid && npm install && npm run build",
     "publish": "run-p publish:*",
     "publish:jsdom": "cd jsdom && npm run deploy",
-    "publish:uuid": "cd uuid && npm run deploy",
+    "publish:uuid": "cd uuid && npm run deploy"
   },
   "keywords": [],
   "author": "",
