@@ -1,0 +1,17 @@
+{
+  "name": "jsdom-aws-lambda-layer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist/nodejs && cp package.json dist/nodejs && cd dist/nodejs && npm install --production && cd .. && zip -r /tmp/jsdom-lambda-layer.zip nodejs",
+    "deploy": "aws lambda publish-layer-version --layer-name 'jsdom-lambda-layer' --description 'NodeJS module of JSDOM library' --license-info 'MIT' --compatible-runtimes 'nodejs12.x' --zip-file 'fileb:////tmp/jsdom-lambda-layer.zip'",
+    "preinstall": "npx npm-check-updates -u"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsdom": "^16.4.0"
+  }
+}
