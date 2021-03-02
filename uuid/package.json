@@ -1,5 +1,5 @@
 {
-  "name": "jsdom-aws-lambda-layer",
+  "name": "uuid-aws-lambda-layer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
