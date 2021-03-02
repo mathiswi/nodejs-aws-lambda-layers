@@ -11,3 +11,16 @@ If you only want to build and publish a specific library only run the commands w
 **NOTE**: The build command always installs the newest available version of the library.
 
 If you want to customize any description check the `package.json` in each folder.
+
+## Adding own layer
+
+You can also deploy your own custom function as a lambda layer. For node modules, the layer expects a zip file with the content in the following structure: 
+
+```bash
+├── nodejs
+   └── node_modules
+       └── module_name
+          ├── index.js
+          └── package.json
+```
+
