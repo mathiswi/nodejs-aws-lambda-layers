@@ -4,7 +4,7 @@ This repo is a collection of lambda layers I use in my personal projects. Requir
 
 ## Building and deploying the layers
 
-Run `npm run build` to automatically build all listed npm modules and run `npm run publish` to upload all of them as a lambda layer.
+Run `npm run build` to automatically build all listed npm modules and run `npm run deploy` to upload all of them as a lambda layer.
 
 If you only want to build and publish a specific library only run the commands with the corresponding folder name like `npm run build:jsdom`.
 
