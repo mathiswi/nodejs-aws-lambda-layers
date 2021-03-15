@@ -1,6 +1,6 @@
 # my nodejs aws lambda layers
 
-This repo is a collection of lambda layers I use in my personal projects. Requires a configured aws-cli.
+Collection of lambda layers I use in my personal projects. Requires a configured aws-cli.
 
 ## Building and deploying the layers
 
