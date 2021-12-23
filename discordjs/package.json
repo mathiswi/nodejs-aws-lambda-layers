@@ -1,0 +1,16 @@
+{
+  "name": "discordjs-aws-lambda-layer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist/nodejs && cp package.json dist/nodejs && cd dist/nodejs && npm install --production && cd .. && zip -r /tmp/discordjs-lambda-layer.zip nodejs",
+    "deploy": "aws lambda publish-layer-version --layer-name 'discordjs-lambda-layer' --description 'NodeJS module of discordjs library' --license-info 'MIT' --compatible-runtimes 'nodejs14.x' --zip-file 'fileb:////tmp/discordjs-lambda-layer.zip'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}

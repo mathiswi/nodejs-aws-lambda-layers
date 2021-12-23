@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "mkdir -p dist/nodejs && cp package.json dist/nodejs && cd dist/nodejs && npm install --production && cd .. && zip -r /tmp/uuid-lambda-layer.zip nodejs",
-    "deploy": "aws lambda publish-layer-version --layer-name 'uuid-lambda-layer' --description 'NodeJS module of uuid library' --license-info 'MIT' --compatible-runtimes 'nodejs12.x' --zip-file 'fileb:////tmp/uuid-lambda-layer.zip'",
-    "preinstall": "npx npm-check-updates -u"
+    "deploy": "aws lambda publish-layer-version --layer-name 'uuid-lambda-layer' --description 'NodeJS module of uuid library' --license-info 'MIT' --compatible-runtimes 'nodejs14.x' --zip-file 'fileb:////tmp/uuid-lambda-layer.zip'",
+    "prebuild": "npx npm-check-updates -u"
   },
   "keywords": [],
   "author": "",

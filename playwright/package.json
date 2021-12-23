@@ -1,0 +1,18 @@
+{
+  "name": "playwright-aws-lambda-layer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist/nodejs && cp package.json dist/nodejs && cd dist/nodejs && npm install --production && cd .. && zip -r /tmp/playwright-lambda-layer.zip nodejs",
+    "deploy": "aws s3 cp /tmp/playwright-lambda-layer.zip s3://lambda-layers-ebay/playwright-lambda-layers.zip && aws lambda publish-layer-version --layer-name 'playwright-lambda-layer' --description 'NodeJS module of playwright library' --license-info 'MIT' --compatible-runtimes 'nodejs14.x' --content S3Bucket=lambda-layers-ebay,S3Key=playwright-lambda-layer.zip",
+    "prebuild": "npx npm-check-updates -u"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "playwright-core": "^1.17.1"
+  }
+}
