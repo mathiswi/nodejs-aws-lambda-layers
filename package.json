@@ -8,7 +8,7 @@
     "build:uuid": "cd uuid && npm run build",
     "build:axios": "cd axios && npm run build",
     "build:discordjs": "cd discordjs && npm run build",
-    "deploy": "run-p deploy:*",
+    "deploy": "run-p build:* && run-p deploy:*",
     "deploy:jsdom": "cd jsdom && npm run deploy",
     "deploy:uuid": "cd uuid && npm run deploy",
     "deploy:axios": "cd axios && npm run deploy",
